@@ -300,3 +300,40 @@ Example Response
   "text": "Sorry, I'm tied up right now, text me later."
 }
 ```
+
+# Environment Setup
+## Clone Repository
+```bash
+git clone https://github.com/saurabhs402/ChatApplication.git
+```
+
+## Directories
+- Backend 
+
+- Frontend 
+  
+### To Run the Server
+Make .env file in the root directory and modify the environment variables acc. to the requirements. 
+
+**My Environment**
+
+```
+PORT=3001
+CONN_STR=mongodb+srv://saurabh:saurabh12345@cluster0.sm6devx.mongodb.net/chat-app-db?retryWrites=true&w=majority&appName=Cluster0
+JWT_SECRET=w85OadhrprnQycLWVHk2YL1DG5wPp/8v6h9VnO+yT9Q=
+OPEN_API_KEY=<generate-from-gemini>
+API_KEY=AIzaSyC0-r9LIbiCRKObXnJkD4l85PW_8jujdlI
+```
+```
+ cd backend
+ npm install
+ npm start
+```
+
+### Run the Client Side(Running at http://localhost:3000)
+```
+cd frontend
+npm install
+nom start
+```
+
