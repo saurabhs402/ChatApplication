@@ -38,11 +38,11 @@ const SignUp = () => {
         <form onSubmit={handleSubmit}>
           <div>
             <label className="label p-2">
-              <span className="text-base label-text">Full Name</span>
+              <span className="text-base label-text text-blue-200">Full Name</span>
             </label>
             <input
               type="text"
-              placeholder="John Doe"
+              placeholder="Full Name"
               className="w-full input input-bordered  h-10"
               value={inputs.fullName}
               onChange={(e) =>
@@ -59,7 +59,7 @@ const SignUp = () => {
             </label>
             <input
               type="text"
-              placeholder="johndoe"
+              placeholder="Username"
               className="w-full input input-bordered h-10"
               value={inputs.username}
               onChange={(e) =>
