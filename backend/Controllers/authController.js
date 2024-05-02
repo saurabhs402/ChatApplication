@@ -20,6 +20,7 @@ const login=async function(req,res){
             fullName: user.fullName,
             username: user.username,
             profilePic: user.profilePic,
+            status:user.status,
             token
         });
     } catch (error) {
@@ -74,6 +75,7 @@ const signup=async function(req,res){
                 fullName: newUser.fullName,
                 username: newUser.username,
                 profilePic: newUser.profilePic,
+                status: newUser.status,
                 token
             });
         } else {

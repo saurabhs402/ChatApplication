@@ -14,5 +14,40 @@ const getUsersForSidebar = async (req, res) => {
         res.status(500).json({ error: "Internal server error" });
     }
 };
+const updateStatus=async function(req,res){
 
-module.exports={getUsersForSidebar}
+    try {
+        const loggedInUserId = req.params.id;
+        console.log(loggedInUserId)
+
+        const user = await User.findOne({ _id:  loggedInUserId  }).select("-password");
+        const value=!user.status
+        const updatedUser = await User.updateOne({ _id: loggedInUserId },{status:value})
+
+        res.status(200).json(updatedUser);
+    } catch (error) {
+        console.error("Error in User Update Status : ", error.message);
+        res.status(500).json({ error: "Internal server error" });
+    }
+
+
+}
+
+const getUser=async function(req,res){
+
+    try {
+        const userId = req.params.id;
+        console.log(userId)
+
+        const user = await User.findOne({ _id: userId }).select("-password");
+    
+        res.status(200).json(user);
+    } catch (error) {
+        console.error("Error in get User: ", error.message);
+        res.status(500).json({ error: "Internal server error" });
+    }
+
+
+
+}
+module.exports={getUsersForSidebar,updateStatus,getUser}

@@ -1,0 +1,1064 @@
+{
+	"info": {
+		"_postman_id": "1246ec44-4f5b-4640-9235-67bd4eb23268",
+		"name": "HireQuotient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23398048"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"johnsingh\", \r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"johnsingh\", \r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Set-Cookie"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMyZWE0MDY5N2UwNDkwMDQzNDk1NTgiLCJpYXQiOjE3MTQ2MjM5MzgsImV4cCI6MTcxNTkxOTkzOH0.-gjVRV57qxBCDxy1Kdd0dcDrUqBPbyACcxPtF-4tTnM; Max-Age=1296000; Path=/; Expires=Fri, 17 May 2024 04:25:38 GMT; HttpOnly; Secure; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "358"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"166-kCBnxdKfxlz/1f14GqKspDEbAOk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 04:25:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6632ea40697e049004349558\",\n    \"fullName\": \"John Singh\",\n    \"username\": \"johnsingh\",\n    \"profilePic\": \"https://avatar.iran.liara.run/public/boy?username=johnsingh\",\n    \"status\": false,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMyZWE0MDY5N2UwNDkwMDQzNDk1NTgiLCJpYXQiOjE3MTQ2MjM5MzgsImV4cCI6MTcxNTkxOTkzOH0.-gjVRV57qxBCDxy1Kdd0dcDrUqBPbyACcxPtF-4tTnM\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/auth/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Set-Cookie"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=; Max-Age=0; Path=/; Expires=Thu, 02 May 2024 04:25:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-71uUsMgZY3FdZp9j1h5YMrBIOgg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 04:25:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logged out successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"Robert Brown\", \r\n    \"username\":\"robertbrown\", \r\n    \"password\":\"123456\", \r\n    \"confirmPassword\":\"123456\", \r\n    \"gender\":\"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\":\"Robert Brown\", \r\n    \"username\":\"robertbrown\", \r\n    \"password\":\"123456\", \r\n    \"confirmPassword\":\"123456\", \r\n    \"gender\":\"male\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Set-Cookie"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMzMTVlODAwMTQ4ZTJhYmFiNzEyZDEiLCJpYXQiOjE3MTQ2MjM5NzYsImV4cCI6MTcxNTkxOTk3Nn0.KuDlzsCSJIhZs8wUNJJUbHSlwItUO2MNEnJ650sXbHQ; Max-Age=1296000; Path=/; Expires=Fri, 17 May 2024 04:26:16 GMT; HttpOnly; Secure; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "363"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16b-TLYPTIt46zspxnjyMaZM/B7yPd0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 04:26:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"663315e800148e2abab712d1\",\n    \"fullName\": \"Robert Brown\",\n    \"username\": \"robertbrown\",\n    \"profilePic\": \"https://avatar.iran.liara.run/public/boy?username=robertbrown\",\n    \"status\": true,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMzMTVlODAwMTQ4ZTJhYmFiNzEyZDEiLCJpYXQiOjE3MTQ2MjM5NzYsImV4cCI6MTcxNTkxOTk3Nn0.KuDlzsCSJIhZs8wUNJJUbHSlwItUO2MNEnJ650sXbHQ\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Send Message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMyZWE0MDY5N2UwNDkwMDQzNDk1NTgiLCJpYXQiOjE3MTQ2MjM5MzgsImV4cCI6MTcxNTkxOTkzOH0.-gjVRV57qxBCDxy1Kdd0dcDrUqBPbyACcxPtF-4tTnM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\":\"Hello, how are you \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/messages/send/6632ea40697e049004349558",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"messages",
+								"send",
+								"6632ea40697e049004349558"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Send Message",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"message\":\"Hello, how are you \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/messages/send/6632ea40697e049004349558",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"messages",
+										"send",
+										"6632ea40697e049004349558"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Set-Cookie"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "230"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e6-fKTxHbjhFwpRUzwmJUYfhhUsL7I\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 04:27:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"senderId\": \"6632ea40697e049004349558\",\n    \"receiverId\": \"6632ea40697e049004349558\",\n    \"message\": \"Hello, how are you \",\n    \"_id\": \"6633162a00148e2abab712d5\",\n    \"createdAt\": \"2024-05-02T04:27:22.449Z\",\n    \"updatedAt\": \"2024-05-02T04:27:22.449Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Messages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMyZWE0MDY5N2UwNDkwMDQzNDk1NTgiLCJpYXQiOjE3MTQ2MjM5MzgsImV4cCI6MTcxNTkxOTkzOH0.-gjVRV57qxBCDxy1Kdd0dcDrUqBPbyACcxPtF-4tTnM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/messages/6632ea40697e049004349558",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"messages",
+								"6632ea40697e049004349558"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Messages",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/messages/6632ea40697e049004349558",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"messages",
+										"6632ea40697e049004349558"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Set-Cookie"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14656"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3940-+acE/PeSTV/7iwDxMlB7qUXiNA4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 04:28:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6632ed6b55d22319462cc5f3\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"abc\",\n        \"createdAt\": \"2024-05-02T01:33:31.020Z\",\n        \"updatedAt\": \"2024-05-02T01:33:31.020Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632ed7855d22319462cc5f8\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"def\",\n        \"createdAt\": \"2024-05-02T01:33:44.121Z\",\n        \"updatedAt\": \"2024-05-02T01:33:44.121Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632ed8055d22319462cc5fd\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"adb\",\n        \"createdAt\": \"2024-05-02T01:33:52.689Z\",\n        \"updatedAt\": \"2024-05-02T01:33:52.689Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632ee3e55d22319462cc602\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"abcd\",\n        \"createdAt\": \"2024-05-02T01:37:02.066Z\",\n        \"updatedAt\": \"2024-05-02T01:37:02.066Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632ee4155d22319462cc607\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"aa\",\n        \"createdAt\": \"2024-05-02T01:37:05.512Z\",\n        \"updatedAt\": \"2024-05-02T01:37:05.512Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632ef3655d22319462cc629\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"abc\",\n        \"createdAt\": \"2024-05-02T01:41:10.349Z\",\n        \"updatedAt\": \"2024-05-02T01:41:10.349Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632ef4155d22319462cc62e\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"abc\",\n        \"createdAt\": \"2024-05-02T01:41:21.299Z\",\n        \"updatedAt\": \"2024-05-02T01:41:21.299Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632ef4655d22319462cc633\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"hii\",\n        \"createdAt\": \"2024-05-02T01:41:26.836Z\",\n        \"updatedAt\": \"2024-05-02T01:41:26.836Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632f4e21aec19ff76f15958\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"abc\",\n        \"createdAt\": \"2024-05-02T02:05:22.015Z\",\n        \"updatedAt\": \"2024-05-02T02:05:22.015Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632f4e91aec19ff76f15960\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"abc\",\n        \"createdAt\": \"2024-05-02T02:05:29.451Z\",\n        \"updatedAt\": \"2024-05-02T02:05:29.451Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632f58a1aec19ff76f15971\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"abc\",\n        \"createdAt\": \"2024-05-02T02:08:10.419Z\",\n        \"updatedAt\": \"2024-05-02T02:08:10.419Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633015400148e2abab70f6c\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"hii john smith\",\n        \"createdAt\": \"2024-05-02T02:58:28.627Z\",\n        \"updatedAt\": \"2024-05-02T02:58:28.627Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633015a00148e2abab70f73\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"hello singh\",\n        \"createdAt\": \"2024-05-02T02:58:34.576Z\",\n        \"updatedAt\": \"2024-05-02T02:58:34.576Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633018300148e2abab70f7a\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"hello smith\",\n        \"createdAt\": \"2024-05-02T02:59:15.948Z\",\n        \"updatedAt\": \"2024-05-02T02:59:15.948Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633018b00148e2abab70f81\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"hello singh\",\n        \"createdAt\": \"2024-05-02T02:59:23.784Z\",\n        \"updatedAt\": \"2024-05-02T02:59:23.784Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633025900148e2abab70f88\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"hello smith\",\n        \"createdAt\": \"2024-05-02T03:02:49.210Z\",\n        \"updatedAt\": \"2024-05-02T03:02:49.210Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633025e00148e2abab70f8f\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"hello singh\",\n        \"createdAt\": \"2024-05-02T03:02:54.474Z\",\n        \"updatedAt\": \"2024-05-02T03:02:54.474Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633027800148e2abab70f99\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"hello smith\",\n        \"createdAt\": \"2024-05-02T03:03:20.024Z\",\n        \"updatedAt\": \"2024-05-02T03:03:20.024Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633028a00148e2abab70fa0\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"hello singh\",\n        \"createdAt\": \"2024-05-02T03:03:38.161Z\",\n        \"updatedAt\": \"2024-05-02T03:03:38.161Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"663302f700148e2abab70fc6\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:05:27.157Z\",\n        \"updatedAt\": \"2024-05-02T03:05:27.157Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633033200148e2abab70fe9\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:06:26.139Z\",\n        \"updatedAt\": \"2024-05-02T03:06:26.139Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633036600148e2abab7100c\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:07:18.723Z\",\n        \"updatedAt\": \"2024-05-02T03:07:18.723Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633036d00148e2abab71013\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:07:25.194Z\",\n        \"updatedAt\": \"2024-05-02T03:07:25.194Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633037a00148e2abab7101d\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:07:38.892Z\",\n        \"updatedAt\": \"2024-05-02T03:07:38.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"663303bf00148e2abab71043\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:08:47.805Z\",\n        \"updatedAt\": \"2024-05-02T03:08:47.805Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633044a00148e2abab71066\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:11:06.939Z\",\n        \"updatedAt\": \"2024-05-02T03:11:06.939Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633045a00148e2abab7106d\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:11:22.865Z\",\n        \"updatedAt\": \"2024-05-02T03:11:22.865Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633047700148e2abab71077\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:11:51.974Z\",\n        \"updatedAt\": \"2024-05-02T03:11:51.974Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633049600148e2abab7107e\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:12:22.521Z\",\n        \"updatedAt\": \"2024-05-02T03:12:22.521Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"663304a500148e2abab71085\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:12:37.040Z\",\n        \"updatedAt\": \"2024-05-02T03:12:37.040Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"663304b400148e2abab7108c\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:12:52.884Z\",\n        \"updatedAt\": \"2024-05-02T03:12:52.884Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"663305b800148e2abab710b2\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:17:12.643Z\",\n        \"updatedAt\": \"2024-05-02T03:17:12.643Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"663305c100148e2abab710b9\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:17:21.247Z\",\n        \"updatedAt\": \"2024-05-02T03:17:21.247Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"663305e500148e2abab710c3\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:17:57.058Z\",\n        \"updatedAt\": \"2024-05-02T03:17:57.058Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633064800148e2abab710e6\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:19:36.029Z\",\n        \"updatedAt\": \"2024-05-02T03:19:36.029Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633066600148e2abab710ed\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:20:06.812Z\",\n        \"updatedAt\": \"2024-05-02T03:20:06.812Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633067d00148e2abab710fd\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:20:29.803Z\",\n        \"updatedAt\": \"2024-05-02T03:20:29.803Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633070000148e2abab71120\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:22:40.499Z\",\n        \"updatedAt\": \"2024-05-02T03:22:40.499Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633070300148e2abab71127\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:22:43.610Z\",\n        \"updatedAt\": \"2024-05-02T03:22:43.610Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633071300148e2abab71131\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:22:59.324Z\",\n        \"updatedAt\": \"2024-05-02T03:22:59.324Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633072f00148e2abab71157\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:23:27.865Z\",\n        \"updatedAt\": \"2024-05-02T03:23:27.865Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633073500148e2abab7115e\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:23:33.919Z\",\n        \"updatedAt\": \"2024-05-02T03:23:33.919Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633074800148e2abab71168\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:23:52.564Z\",\n        \"updatedAt\": \"2024-05-02T03:23:52.564Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330b6f00148e2abab71194\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:41:35.470Z\",\n        \"updatedAt\": \"2024-05-02T03:41:35.470Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330b7500148e2abab7119b\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:41:41.239Z\",\n        \"updatedAt\": \"2024-05-02T03:41:41.239Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330b9600148e2abab711a2\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:42:14.287Z\",\n        \"updatedAt\": \"2024-05-02T03:42:14.287Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330bef00148e2abab711c5\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:43:43.555Z\",\n        \"updatedAt\": \"2024-05-02T03:43:43.555Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330bfa00148e2abab711cc\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:43:54.320Z\",\n        \"updatedAt\": \"2024-05-02T03:43:54.320Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330ccf00148e2abab711f7\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:47:27.967Z\",\n        \"updatedAt\": \"2024-05-02T03:47:27.967Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330d1c00148e2abab7121a\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:48:44.952Z\",\n        \"updatedAt\": \"2024-05-02T03:48:44.952Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330d2e00148e2abab71221\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:49:02.418Z\",\n        \"updatedAt\": \"2024-05-02T03:49:02.418Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330d4200148e2abab7122b\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:49:22.362Z\",\n        \"updatedAt\": \"2024-05-02T03:49:22.362Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330de100148e2abab71251\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:52:01.950Z\",\n        \"updatedAt\": \"2024-05-02T03:52:01.950Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330de900148e2abab71258\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:52:09.588Z\",\n        \"updatedAt\": \"2024-05-02T03:52:09.588Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330dfa00148e2abab71262\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:52:26.224Z\",\n        \"updatedAt\": \"2024-05-02T03:52:26.224Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330e0500148e2abab71269\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:52:37.186Z\",\n        \"updatedAt\": \"2024-05-02T03:52:37.186Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330e2d00148e2abab71270\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:53:17.540Z\",\n        \"updatedAt\": \"2024-05-02T03:53:17.540Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330e3800148e2abab71277\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:53:28.477Z\",\n        \"updatedAt\": \"2024-05-02T03:53:28.477Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330e5e00148e2abab7127e\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:54:06.769Z\",\n        \"updatedAt\": \"2024-05-02T03:54:06.769Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330e8300148e2abab71293\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:54:43.115Z\",\n        \"updatedAt\": \"2024-05-02T03:54:43.115Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330edd00148e2abab7129a\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:56:13.726Z\",\n        \"updatedAt\": \"2024-05-02T03:56:13.726Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330ef300148e2abab712a1\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:56:35.562Z\",\n        \"updatedAt\": \"2024-05-02T03:56:35.562Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330f0d00148e2abab712a8\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:57:01.237Z\",\n        \"updatedAt\": \"2024-05-02T03:57:01.237Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330f1e00148e2abab712af\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:57:18.058Z\",\n        \"updatedAt\": \"2024-05-02T03:57:18.058Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330f4800148e2abab712b6\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:58:00.789Z\",\n        \"updatedAt\": \"2024-05-02T03:58:00.789Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330f5500148e2abab712c0\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea7b697e04900434955c\",\n        \"message\": \"sm\",\n        \"createdAt\": \"2024-05-02T03:58:13.250Z\",\n        \"updatedAt\": \"2024-05-02T03:58:13.250Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"66330f5b00148e2abab712ca\",\n        \"senderId\": \"6632ea7b697e04900434955c\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"js\",\n        \"createdAt\": \"2024-05-02T03:58:19.869Z\",\n        \"updatedAt\": \"2024-05-02T03:58:19.869Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6633162a00148e2abab712d5\",\n        \"senderId\": \"6632ea40697e049004349558\",\n        \"receiverId\": \"6632ea40697e049004349558\",\n        \"message\": \"Hello, how are you \",\n        \"createdAt\": \"2024-05-02T04:27:22.449Z\",\n        \"updatedAt\": \"2024-05-02T04:27:22.449Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMyZWE0MDY5N2UwNDkwMDQzNDk1NTgiLCJpYXQiOjE3MTQ2MjM5MzgsImV4cCI6MTcxNTkxOTkzOH0.-gjVRV57qxBCDxy1Kdd0dcDrUqBPbyACcxPtF-4tTnM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Set-Cookie"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1096"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"448-/7XcZOOUFW/eKqsAFEQCG0GNado\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 04:28:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6632ea7b697e04900434955c\",\n        \"fullName\": \"John Smith\",\n        \"username\": \"johnsmith\",\n        \"gender\": \"male\",\n        \"profilePic\": \"https://avatar.iran.liara.run/public/boy?username=johnsmith\",\n        \"status\": true,\n        \"createdAt\": \"2024-05-02T01:20:59.518Z\",\n        \"updatedAt\": \"2024-05-02T03:58:10.374Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632eaca55d22319462cc5b1\",\n        \"fullName\": \"John White\",\n        \"username\": \"johnwhite\",\n        \"gender\": \"male\",\n        \"profilePic\": \"https://avatar.iran.liara.run/public/boy?username=johnwhite\",\n        \"status\": true,\n        \"createdAt\": \"2024-05-02T01:22:18.132Z\",\n        \"updatedAt\": \"2024-05-02T01:22:18.132Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6632ead655d22319462cc5b4\",\n        \"fullName\": \"John Karl\",\n        \"username\": \"johnkarl\",\n        \"gender\": \"male\",\n        \"profilePic\": \"https://avatar.iran.liara.run/public/boy?username=johnkarl\",\n        \"status\": true,\n        \"createdAt\": \"2024-05-02T01:22:30.914Z\",\n        \"updatedAt\": \"2024-05-02T01:22:30.914Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"663315e800148e2abab712d1\",\n        \"fullName\": \"Robert Brown\",\n        \"username\": \"robertbrown\",\n        \"gender\": \"male\",\n        \"profilePic\": \"https://avatar.iran.liara.run/public/boy?username=robertbrown\",\n        \"status\": true,\n        \"createdAt\": \"2024-05-02T04:26:16.185Z\",\n        \"updatedAt\": \"2024-05-02T04:26:16.185Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMyZWE0MDY5N2UwNDkwMDQzNDk1NTgiLCJpYXQiOjE3MTQ2MjM5MzgsImV4cCI6MTcxNTkxOTkzOH0.-gjVRV57qxBCDxy1Kdd0dcDrUqBPbyACcxPtF-4tTnM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/users/6632ea40697e049004349558",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users",
+								"6632ea40697e049004349558"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateStatus",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/users/6632ea40697e049004349558",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"6632ea40697e049004349558"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Set-Cookie"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-XE4LqSKK8lMBgnDPfq7vp2yCSG8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 04:29:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true,\n    \"modifiedCount\": 1,\n    \"upsertedId\": null,\n    \"upsertedCount\": 0,\n    \"matchedCount\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMyZWE0MDY5N2UwNDkwMDQzNDk1NTgiLCJpYXQiOjE3MTQ2MjM5MzgsImV4cCI6MTcxNTkxOTkzOH0.-gjVRV57qxBCDxy1Kdd0dcDrUqBPbyACcxPtF-4tTnM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/users/6632ea7b697e04900434955c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users",
+								"6632ea7b697e04900434955c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/users/6632ea7b697e04900434955c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"users",
+										"6632ea7b697e04900434955c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Set-Cookie"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "272"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"110-G7JQuXw7LDIZQcE7dKEOIh79HTg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 04:29:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6632ea7b697e04900434955c\",\n    \"fullName\": \"John Smith\",\n    \"username\": \"johnsmith\",\n    \"gender\": \"male\",\n    \"profilePic\": \"https://avatar.iran.liara.run/public/boy?username=johnsmith\",\n    \"status\": true,\n    \"createdAt\": \"2024-05-02T01:20:59.518Z\",\n    \"updatedAt\": \"2024-05-02T03:58:10.374Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "geminiTestUsingCurl",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"contents\":[{\"parts\":[{\"text\":\"A single sentence response that the user is busy please text him later\"}]}]}"
+						},
+						"url": {
+							"raw": "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyC0-r9LIbiCRKObXnJkD4l85PW_8jujdlI",
+							"protocol": "https",
+							"host": [
+								"generativelanguage",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"v1beta",
+								"models",
+								"gemini-pro:generateContent"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "AIzaSyC0-r9LIbiCRKObXnJkD4l85PW_8jujdlI"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "geminiTestUsingCurl",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"contents\":[{\"parts\":[{\"text\":\"A single sentence response that the user is busy please text him later\"}]}]}"
+								},
+								"url": {
+									"raw": "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyC0-r9LIbiCRKObXnJkD4l85PW_8jujdlI",
+									"protocol": "https",
+									"host": [
+										"generativelanguage",
+										"googleapis",
+										"com"
+									],
+									"path": [
+										"v1beta",
+										"models",
+										"gemini-pro:generateContent"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "AIzaSyC0-r9LIbiCRKObXnJkD4l85PW_8jujdlI"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "X-Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Referer"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 04:30:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "scaffolding on HTTPServer2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Server-Timing",
+									"value": "gfet4t7; dur=1179"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"candidates\": [\n        {\n            \"content\": {\n                \"parts\": [\n                    {\n                        \"text\": \"Sorry, I'm currently busy. Please text later.\"\n                    }\n                ],\n                \"role\": \"model\"\n            },\n            \"finishReason\": \"STOP\",\n            \"index\": 0,\n            \"safetyRatings\": [\n                {\n                    \"category\": \"HARM_CATEGORY_SEXUALLY_EXPLICIT\",\n                    \"probability\": \"NEGLIGIBLE\"\n                },\n                {\n                    \"category\": \"HARM_CATEGORY_HATE_SPEECH\",\n                    \"probability\": \"NEGLIGIBLE\"\n                },\n                {\n                    \"category\": \"HARM_CATEGORY_HARASSMENT\",\n                    \"probability\": \"NEGLIGIBLE\"\n                },\n                {\n                    \"category\": \"HARM_CATEGORY_DANGEROUS_CONTENT\",\n                    \"probability\": \"NEGLIGIBLE\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "geminiResponse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/gemini",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"gemini"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "geminiResponse",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/api/gemini",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"gemini"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Set-Cookie"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4a-uDanKBQV7h8/h0XUNmWYFYBsC5k\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 04:30:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"text\": \"Sorry, I'm tied up right now, text me later.\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

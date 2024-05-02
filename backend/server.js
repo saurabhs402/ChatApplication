@@ -8,7 +8,8 @@ const express = require("express")
 const authRouter = require('./Routes/authRouter')
 const messageRouter = require('./Routes/messageRouter')
 const cookieParser = require('cookie-parser')
-const userRouter = require("./Routes/userRouter.js")
+const userRouter = require("./Routes/userRouter")
+const geminiRouter=require("./Routes/geminiRouter")
 
 
 process.on('uncaughtException', function (err) {
@@ -37,8 +38,6 @@ mongoose.connect(process.env.CONN_STR, {
 //Ends
 
 
-
-
 app.use(cors({
     exposedHeaders: ['Set-Cookie']
 }))
@@ -50,6 +49,7 @@ app.use(cookieParser())
 app.use('/api/auth', authRouter)
 app.use('/api/messages', messageRouter)
 app.use('/api/users', userRouter)
+app.use('/api/gemini',geminiRouter)
 
 // here we are not creating diff. app using express 
 //if we do so app.js and server.js are not remain connected
