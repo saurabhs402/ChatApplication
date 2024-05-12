@@ -7,7 +7,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
     //frontend url
     cors: {
-        origin: ["http://localhost:3000"],
+        origin: ["https://convo-craft-six.vercel.app/"],
         methods: ["GET", "POST"],
         
     },
