@@ -12,7 +12,7 @@ Deployed Link: https://convo-craft-saurabh.vercel.app
 ## Auth
 ### POST login
 
-    http://localhost:3001/api/auth/login
+    https://convocraft-production.up.railway.app/api/auth/login
 ```
 
 Body raw (json)
@@ -34,7 +34,7 @@ Example Response
 ```
 
 ### POST logout
-    http://localhost:3001/api/auth/logout
+    https://convocraft-production.up.railway.app/api/auth/logout
 ``` 
 Example Response
 {
@@ -43,7 +43,7 @@ Example Response
 ``` 
 
 ### POST signup
-      http://localhost:3001/api/auth/signup
+      https://convocraft-production.up.railway.app/api/auth/signup
 ```
 Body raw (json)
 {
@@ -71,7 +71,7 @@ Example Response
 ### POST Send Message
 
 ```   
-http://localhost:3001/api/messages/send/6632ea40697e049004349558
+https://convocraft-production.up.railway.app/api/messages/send/6632ea40697e049004349558
 ```
 ```
 Body raw (json)
@@ -94,7 +94,7 @@ Example Response
 
 ### GET Get Messages
 ```
-http://localhost:3001/api/messages/6632ea40697e049004349558
+https://convocraft-production.up.railway.app/api/messages/6632ea40697e049004349558
 ```
 
 ```
@@ -146,7 +146,7 @@ Example Response
 
 ### GET Get Users
 ```
-http://localhost:3001/api/users
+https://convocraft-production.up.railway.app/api/users
 ```
 ```
 AUTHORIZATION Bearer Token
@@ -206,7 +206,7 @@ Example Response
 ### PATCH updateStatus
 
 ```
-http://localhost:3001/api/users/6632ea40697e049004349558
+https://convocraft-production.up.railway.app/api/users/6632ea40697e049004349558
 ```
 ```
 AUTHORIZATION Bearer Token
@@ -224,7 +224,7 @@ Example Response
 ```
 ### GET Get User
 ```
-http://localhost:3001/api/users/6632ea7b697e04900434955c
+https://convocraft-production.up.railway.app/api/users/6632ea7b697e04900434955c
 ```
 ```
 AUTHORIZATION Bearer Token
@@ -292,7 +292,7 @@ Example Response
 ```
 ### GET geminiResponse
 ```
-http://localhost:3001/api/gemini
+https://convocraft-production.up.railway.app/api/gemini
 ```
 
 ```
