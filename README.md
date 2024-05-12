@@ -1,4 +1,4 @@
-# ChatApplication
+# ConvoCraft
 
 The chat application facilitates real-time communication between users, enabling them to exchange text messages seamlessly. Users can sign up, log in, and set their online status as 'available' or 'busy'. Upon login, users can view their contacts and initiate chats with online users.
 
