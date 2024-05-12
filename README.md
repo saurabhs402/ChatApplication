@@ -5,7 +5,7 @@ The chat application facilitates real-time communication between users, enabling
  
 Postman API Publish Link: https://documenter.getpostman.com/view/23398048/2sA3JFA44t
 
-Deployed Link: https://convo-craft-six.vercel.app
+Deployed Link: https://convo-craft-saurabh.vercel.app
 
 
 # API Documentation
