@@ -14,7 +14,7 @@ const useSendMessage = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `http://localhost:3001/api/messages/send/${selectedConversation._id}`,
+        `https://convocraft-production.up.railway.app/api/messages/send/${selectedConversation._id}`,
         {
           method: "POST",
           headers: {
@@ -39,7 +39,7 @@ const useSendMessage = () => {
     const getUser = async function () {
       try {
         const res = await fetch(
-          `http://localhost:3001/api/users/${selectedConversation._id}`,
+          `https://convocraft-production.up.railway.app/api/users/${selectedConversation._id}`,
           {
             headers: {
               Authorization: `Bearer ${authUser.token}`, // Include JWT token
@@ -122,12 +122,15 @@ const getGeminiMessage=async function(authUser){
     
    
       try {
-        const res = await fetch(`http://localhost:3001/api/gemini`, {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${authUser.token}`, // Include JWT token
-          },
-        });
+        const res = await fetch(
+          `https://convocraft-production.up.railway.app/api/gemini`,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${authUser.token}`, // Include JWT token
+            },
+          }
+        );
         const data = await res.json();
         
         if (data.error) throw new Error(data.error);

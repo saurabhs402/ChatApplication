@@ -14,7 +14,7 @@ const useGetMessages = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          `http://localhost:3001/api/messages/${selectedConversation._id}`,
+          `https://convocraft-production.up.railway.app/api/messages/${selectedConversation._id}`,
           {
             headers: {
               Authorization: `Bearer ${authUser.token}`, // Include JWT token

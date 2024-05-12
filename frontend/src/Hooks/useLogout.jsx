@@ -9,10 +9,13 @@ const useLogout = () => {
   const logout = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:3001/api/auth/logout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-      });
+      const res = await fetch(
+        "https://convocraft-production.up.railway.app/api/auth/logout",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+        }
+      );
       const data = await res.json();
       if (data.error) {
         throw new Error(data.error);

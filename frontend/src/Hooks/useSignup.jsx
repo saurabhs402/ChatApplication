@@ -24,17 +24,20 @@ const useSignup = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:3001/api/auth/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fullName,
-          username,
-          password,
-          confirmPassword,
-          gender,
-        }),
-      });
+      const res = await fetch(
+        "https://convocraft-production.up.railway.app/api/auth/signup",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            fullName,
+            username,
+            password,
+            confirmPassword,
+            gender,
+          }),
+        }
+      );
 
       const data = await res.json();
       // if (data.error) {

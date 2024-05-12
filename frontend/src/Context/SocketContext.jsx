@@ -18,7 +18,7 @@ export const SocketContextProvider = ({ children }) => {
       
       
       // backend url
-      const socket = io("http://localhost:3001", {
+      const socket = io("https://convocraft-production.up.railway.app", {
         query: {
           userId: authUser._id,
         },
@@ -30,7 +30,7 @@ export const SocketContextProvider = ({ children }) => {
       socket.on("getOnlineUsers", (users) => {
         setOnlineUsers(users);
       });
-
+ 
       return () => socket.close();
     } else {
       if (socket) {

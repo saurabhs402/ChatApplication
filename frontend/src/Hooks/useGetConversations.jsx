@@ -12,13 +12,14 @@ const useGetConversations = () => {
     const getConversations = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:3001/api/users",{
-         headers: {
-            Authorization: `Bearer ${authUser.token}`, // Include JWT token
-          },
-        }
-      
-      );
+        const res = await fetch(
+          "https://convocraft-production.up.railway.app/api/users",
+          {
+            headers: {
+              Authorization: `Bearer ${authUser.token}`, // Include JWT token
+            },
+          }
+        );
         const data = await res.json();
         if (data.error) {
           throw new Error(data.error);

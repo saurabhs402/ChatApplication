@@ -18,7 +18,7 @@ const ToggleButton = function () {
      try {
       console.log(authUser._id)
       const res = await fetch(
-        `http://localhost:3001/api/users/${authUser._id}`,
+        `https://convocraft-production.up.railway.app/api/users/${authUser._id}`,
         {
           method: "PATCH",
           headers: {
